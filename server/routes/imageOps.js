@@ -7,6 +7,9 @@ const { handleUpload, handleUrl } = require("../controllers/imageFuncs");
 router.get("/", (req, res) => {
   res.send("Hello World");
 });
+router.get("/health", (req, res) => {
+  res.send("Health route");
+});
 
 router.post("/upload", upload.single("img"), handleUpload);
 

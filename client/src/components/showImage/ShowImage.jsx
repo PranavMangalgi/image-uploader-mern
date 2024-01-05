@@ -8,7 +8,7 @@ function ShowImage() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/${id}`);
+        const response = await axios.get(`https://image-uploader-server-7bikexkon-pranavmangalgi.vercel.app/${id}`);
         if (response.status === 200) {
           console.log(response.data);
           setImg(response.data);
