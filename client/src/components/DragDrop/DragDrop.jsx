@@ -34,7 +34,7 @@ function Previews() {
         setPage("upload");
         console.log(formData);
         const response = await axios.post(
-          "https://image-uploader-server-7bikexkon-pranavmangalgi.vercel.app/upload",
+          "https://image-uploader-o7x8.onrender.com/upload",
           formData,
           {
             headers: {
