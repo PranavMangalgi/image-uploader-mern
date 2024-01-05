@@ -10,7 +10,6 @@ function ShowImage() {
       try {
         const response = await axios.get(`https://image-uploader-o7x8.onrender.com/${id}`);
         if (response.status === 200) {
-          console.log(response.data);
           setImg(response.data);
         }
       } catch (e) {

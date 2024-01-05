@@ -6,8 +6,6 @@ const handleUpload = async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ error: "No file provided." });
     }
-    console.log(req.file);
-    console.log(req.file.buffer);
     const shortId = shortid();
     const newImg = await URL.create({
       image: {

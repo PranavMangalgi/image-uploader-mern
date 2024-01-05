@@ -32,7 +32,6 @@ function Previews() {
 
       try {
         setPage("upload");
-        console.log(formData);
         const response = await axios.post(
           "https://image-uploader-o7x8.onrender.com/upload",
           formData,
@@ -44,7 +43,6 @@ function Previews() {
         );
 
         console.log("Files uploaded successfully:", response.data);
-        console.log(response.data.url);
         setImage(response.data.str);
 
         setUrl(response.data.url);
