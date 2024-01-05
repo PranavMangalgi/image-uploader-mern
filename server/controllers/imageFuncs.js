@@ -18,7 +18,7 @@ const handleUpload = async (req, res) => {
     });
 
     const str = `data:${newImg.image.contentType};base64,${newImg.image.data}`;
-    const url = `https://image-uploader-mern.netlify.app/${shortId}`;
+    const url = `http://localhost:4000/${shortId}`;
 
     res.status(201).send({ str, url });
   } catch (e) {
@@ -29,6 +29,9 @@ const handleUpload = async (req, res) => {
 const handleUrl = async (req, res) => {
   try {
     const { shortUrl } = req.params;
+    if(!req.params){
+      res.status(404).json({error:" shortUrl has no value"})
+    }
     const img = await URL.findOne({ shortUrl });
     const str = `data:${img.image.contentType};base64,${img.image.data}`;
     res.status(200).send(str);
