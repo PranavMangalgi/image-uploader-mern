@@ -18,7 +18,7 @@ const handleUpload = async (req, res) => {
     });
 
     const str = `data:${newImg.image.contentType};base64,${newImg.image.data}`;
-    const url = `https://image-uploader-mern-pranavmangalgi.vercel.app/${shortId}`;
+    const url = `https://image-uploader-mern.netlify.app/${shortId}`;
 
     res.status(201).send({ str, url });
   } catch (e) {

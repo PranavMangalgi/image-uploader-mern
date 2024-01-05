@@ -8,7 +8,6 @@ router.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-
 router.post("/upload", upload.single("img"), handleUpload);
 
 router.get("/:shortUrl", handleUrl);
