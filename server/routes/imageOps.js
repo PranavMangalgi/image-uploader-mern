@@ -10,6 +10,6 @@ router.get("/", (req, res) => {
 
 router.post("/upload", upload.single("img"), handleUpload);
 
-router.get("/:shortUrl", handleUrl);
+router.get("/:id", handleUrl);
 
 module.exports = router;

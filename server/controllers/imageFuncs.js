@@ -28,11 +28,11 @@ const handleUpload = async (req, res) => {
 
 const handleUrl = async (req, res) => {
   try {
-    const { shortUrl } = req.params;
+    const { id } = req.params;
     if(!req.params){
-      res.status(404).json({error:" shortUrl has no value"})
+      res.status(404).json({error:" id has no value"})
     }
-    const img = await URL.findOne({ shortUrl });
+    const img = await URL.findOne({  shortUrl:id });
     const str = `data:${img.image.contentType};base64,${img.image.data}`;
     res.status(200).send(str);
   } catch (e) {
