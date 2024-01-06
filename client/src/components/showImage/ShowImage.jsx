@@ -8,7 +8,7 @@ function ShowImage() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get(`https://image-uploader-o7x8.onrender.com/${id}`);
+        const response = await axios.get(`https://image-uploader-sgit.onrender.com/${id}`);
         if (response.status === 200) {
           setImg(response.data);
         }

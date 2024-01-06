@@ -33,7 +33,7 @@ function Previews() {
       try {
         setPage("upload");
         const response = await axios.post(
-          "https://image-uploader-o7x8.onrender.com/upload",
+          "https://image-uploader-sgit.onrender.com/upload",
           formData,
           {
             headers: {
