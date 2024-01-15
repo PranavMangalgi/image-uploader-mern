@@ -1,5 +1,5 @@
 import DragDrop from "../DragDrop/DragDrop";
-import Uploading from "../Uplaoding/Uploading";
+import Uploading from "../Uploading/Uploading";
 import LinkPage from "../LinkPage/LinkPage";
 import { IoMdHome } from "react-icons/io";
 import { useContext } from "react";
